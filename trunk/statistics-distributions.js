@@ -164,7 +164,7 @@ function _subfprob ($n, $m, $x) {
 		for (var $i = $m - 2; $i >= 2; $i -= 2) {
 			$a = 1 + ($n + $i - 2) / $i * $z * $a;
 		}
-		$p = 1 - Math.pow((1 - $z), ($n / 2) * $a);
+		$p = 1 - (Math.pow((1 - $z), ($n / 2)) * $a);
 	} else if ($n % 2 == 0) {
 		var $z = $n * $x / ($m + $n * $x);
 		var $a = 1;
@@ -458,7 +458,7 @@ function log10 ($n) {
  
 function max () {
 	var $max = arguments[0];
-	for (var $i = 0; i < arguments.length; i++) {
+	for (var $i = 0; $i < arguments.length; $i++) {
                 if ($max < arguments[$i])
                         $max = arguments[$i];
 	}	
